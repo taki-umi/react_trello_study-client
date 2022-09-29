@@ -9,6 +9,8 @@ export const TaskAddInput = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e);
+    setTaskList([...taskList, { text: inputText }]);
+    console.log(...taskList);
   };
 
   const handleChange = (e) => {

@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Tasks = () => {
+export const Tasks = (taskList) => {
   return <div>Tasks</div>;
 };
