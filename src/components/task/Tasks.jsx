@@ -1,5 +1,11 @@
 import React from "react";
 
-export const Tasks = (taskList) => {
-  return <div>Tasks</div>;
+export const Tasks = ({ inputText, taskList }) => {
+  return (
+    <div>
+      {taskList.map((task) => (
+        <div>{task.text}</div>
+      ))}
+    </div>
+  );
 };
