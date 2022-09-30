@@ -6,8 +6,8 @@ export const Task = ({ task }) => {
     // ごみ箱マークは「Font Awesome」から使用
     <div className="taskBox">
       <p className="taskText">{task.text}</p>
-      <button>
-        <i class="fa-solid fa-trash-can"></i>
+      <button className="taskTrashButton">
+        <i className="fa-solid fa-trash-can"></i>
       </button>
     </div>
   );
