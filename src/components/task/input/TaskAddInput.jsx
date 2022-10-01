@@ -9,10 +9,14 @@ export const TaskAddInput = ({
   // フォーム押下時に呼び出されるメソッド
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+
+    // フォームのテキストが空白であれば処理終了
+    if (inputText === "") return;
+
     setTaskList([
       ...taskList,
       {
+        id: taskList.length,
         text: inputText,
       },
     ]);

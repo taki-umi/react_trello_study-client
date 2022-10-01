@@ -71,6 +71,7 @@ header {
 }
 
 .taskTrashButton {
+  cursor: pointer;
   margin-right: 9px;
   border: none;
 }
