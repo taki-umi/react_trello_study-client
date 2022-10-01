@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuid } from "uuid";
 
 export const TaskAddInput = ({
   inputText,
@@ -8,15 +9,18 @@ export const TaskAddInput = ({
 }) => {
   // フォーム押下時に呼び出されるメソッド
   const handleSubmit = (e) => {
+    const taskId = uuid();
     e.preventDefault();
 
     // フォームのテキストが空白であれば処理終了
     if (inputText === "") return;
 
+    // taskListに情報を追加する
     setTaskList([
       ...taskList,
       {
-        id: taskList.length,
+        id: taskId,
+        draggableId: `task-${taskId}`,
         text: inputText,
       },
     ]);
