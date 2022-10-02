@@ -27,14 +27,19 @@ header {
 .taskCard {
   width: 250px;
   padding: 10px 25px;
-  margin: 10px 1%;
-  background-color: rgb(228, 288, 288);
+  margin: 10px 10px;
+  background-color: whitesmoke;
 }
 
 .TaskCardTitleInputArea {
   margin-bottom: 10px;
   width: 30%;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.TaskCardTitleInputArea:hover {
+  color: dimgray;
 }
 
 .TaskCardTitleInput {
@@ -74,4 +79,28 @@ header {
   cursor: pointer;
   margin-right: 9px;
   border: none;
+}
+
+.TaskCardsArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.addTaskCardButtonArea {
+  margin-left: 1%;
+  margin-top: 25px;
+}
+
+.addTaskCardButton {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: dimgray;
+  transition: 0.2s;
+}
+
+.addTaskCardButton:hover {
+  transform: translateY(-5px);
 }
