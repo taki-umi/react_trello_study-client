@@ -5,15 +5,16 @@ import { TaskCard } from "./TaskCard";
 import { v4 as uuid } from "uuid";
 
 export const TaskCards = () => {
-  const taskId = uuid();
-  const [taskCardsList, setTaskCardsList] = useState([taskId]);
+  const taskCardId = uuid();
+  const [taskCardsList, setTaskCardsList] = useState([
+    // taskCardId,
+    // `taskCardId-${taskCardId}`,
+  ]);
 
   return (
     <div className="TaskCardsArea">
-      {taskCardsList.map((taskCard, index) => (
-        <div key={taskCard.id}>
-          <TaskCard taskCard={taskCard} index={index} />
-        </div>
+      {taskCardsList.map((taskCardList) => (
+        <TaskCard key={taskCardList.id} />
       ))}
       <AddTaskCardButton
         taskCardsList={taskCardsList}

@@ -104,3 +104,15 @@ header {
 .addTaskCardButton:hover {
   transform: translateY(-5px);
 }
+
+.taskCardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskCardDeleteButton {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: rgb(158, 46, 46);
+}
